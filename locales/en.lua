@@ -35,6 +35,13 @@ Locales['en'] = {
 ['you_confiscated_weapon'] = 'you confiscated ~b~%s~s~ from ~b~%s~s~ with ~o~%s~s~ bullets',
 ['got_confiscated_weapon'] = 'your ~b~%s~s~ with ~o~%s~s~ bullets was confiscated by ~y~%s~s~',
  
+['you_have_hired']         = 'you have recruited %s',
+['you_have_been_hired']    = 'you have been hired by %s',
+['you_have_fired']         = 'you have fired %s',
+['you_have_been_fired']    = 'you have been fired from %s',
+['you_have_promoted']      = 'you have promoted %s as %s',
+['you_have_been_promoted'] = 'you have been ~b~promoted~s~!',
+
 -- Boss Menu
 ['wash_money_amount'] = 'Amount of Money to Launder',
 ['quantity_invalid'] = 'invalid quantity',
@@ -53,4 +60,9 @@ Locales['en'] = {
 ['recruit'] = 'Recruit to Gang',
 ['promote'] = 'Promote',
 ['fire'] = 'Fire',
+
+['yes'] = 'Yes',
+['no']= 'No',
+['recruiting']='Recruiting',
+['do_you_want_to_recruit'] = 'Do You Want To Recruit This Person?'
 }

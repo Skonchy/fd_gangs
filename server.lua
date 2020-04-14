@@ -133,8 +133,8 @@ ESX.RegisterServerCallback('fd_gangs:setGang', function(source, cb, identifier, 
 
         cb()
     else
-        MySQL.Async.execute('UPDATE users SET job = @job, job_grade = @job_grade WHERE identifier = @identifier', {
-            ['@job']        = job,
+        MySQL.Async.execute('UPDATE users SET gang = @job, gang_grade = @job_grade WHERE identifier = @identifier', {
+            ['@job']        = gang,
             ['@job_grade']  = grade,
             ['@identifier'] = identifier
         }, function(rowsChanged)

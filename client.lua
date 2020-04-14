@@ -395,10 +395,6 @@ function OpenBossMenu(society, close, options)
 		table.insert(elements, {label = _U('member_management'), value = 'manage_employees'})
 	end
 
-	if options.grades then
-		table.insert(elements, {label = _U('salary_management'), value = 'manage_grades'})
-	end
-
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'boss_actions_' .. society, {
 		title    = _U('boss_menu'),
 		align    = 'top-left',
@@ -533,7 +529,7 @@ function OpenEmployeeList(society)
 
 				ESX.TriggerServerCallback('fd_gangs:setGang', function()
 					OpenEmployeeList(society)
-				end, employee.identifier,nil, 0, 'fire')
+				end, employee.identifier,nil, nil, 'fire')
 			end
 		end, function(data, menu)
 			menu.close()
