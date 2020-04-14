@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `gang` INT(5), `gang_grade` INT(2);
