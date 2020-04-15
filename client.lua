@@ -578,7 +578,7 @@ function OpenRecruitMenu(society)
 
 					ESX.TriggerServerCallback('fd_gangs:setGang', function()
 						OpenRecruitMenu(society)
-					end, data.current.identifier, society, 0, 'hire')
+					end, data.current.identifier, society, 1, 'hire')
 				end
 			end, function(data2, menu2)
 				menu2.close()

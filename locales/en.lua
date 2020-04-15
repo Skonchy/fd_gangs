@@ -64,5 +64,5 @@ Locales['en'] = {
 ['yes'] = 'Yes',
 ['no']= 'No',
 ['recruiting']='Recruiting',
-['do_you_want_to_recruit'] = 'Do You Want To Recruit This Person?'
+['do_you_want_to_recruit'] = 'Do You Want To Recruit This Person?',
 }
