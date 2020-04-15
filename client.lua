@@ -93,7 +93,7 @@ function OpenIdentityCardMenu(player)
 end
 
 function OpenBodySearchMenu(player)
-	ESX.TriggerServerCallback('esx_policejob:getOtherPlayerData', function(data)
+	ESX.TriggerServerCallback('fd_gangs:getOtherPlayerData', function(data)
 		local elements = {}
 
 		for i=1, #data.accounts, 1 do
@@ -165,7 +165,7 @@ AddEventHandler('fd_gangs:handcuff', function()
 		DisablePlayerFiring(playerPed, true)
 		SetCurrentPedWeapon(playerPed, GetHashKey('WEAPON_UNARMED'), true) -- unarm player
 		SetPedCanPlayGestureAnims(playerPed, false)
-		FreezeEntityPosition(playerPed, true)
+		--FreezeEntityPosition(playerPed, false)
 		DisplayRadar(false)
 
 		if Config.EnableHandcuffTimer then
