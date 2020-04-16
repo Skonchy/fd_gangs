@@ -35,10 +35,12 @@ ESX.RegisterServerCallback('fd_gangs:isBoss', function(source,cb,gang)
 end)
 
 ESX.RegisterServerCallback('fd_gangs:whatGang', function(source, cb, type)
-    local xPlayer = ESX.GetPlayerFromId(source)
-    MySQL.Async.fetchAll("SELECT * FROM users WHERE gang IS NOT NULL AND identifier = @identifier", {['@identifier']=xPlayer.identifier}, function(result)
-        cb(result)
-    end)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	if(xPlayer~=nil) then
+    	MySQL.Async.fetchAll("SELECT * FROM users WHERE gang IS NOT NULL AND identifier = @identifier", {['@identifier']=xPlayer.identifier}, function(result)
+        	cb(result)
+		end)
+	end
 end)
 
 ESX.RegisterServerCallback('fd_gangs:getOnlinePlayers', function(source, cb)

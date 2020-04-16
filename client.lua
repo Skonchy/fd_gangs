@@ -7,9 +7,11 @@ local currentAction
 Citizen.CreateThread(function()
     while true do
         --if ESX.IsPlayerLoaded() then
-            ESX.TriggerServerCallback('fd_gangs:whatGang',function(xPlayer)
-            player.gang=xPlayer[1].gang
-            player.gang_grade=xPlayer[1].gang_grade
+			ESX.TriggerServerCallback('fd_gangs:whatGang',function(xPlayer)
+				if tablelength(xPlayer)~=0 then
+            		player.gang=xPlayer[1].gang
+					player.gang_grade=xPlayer[1].gang_grade
+				end
             end)
             Citizen.Wait(1500)
         --end
@@ -18,6 +20,14 @@ end)
 
 local isHandcuffed = false
 local handcuffTimer, dragStatus = {}, {}
+
+function tablelength(T)
+    local count = 0
+    for _ in pairs(T) do 
+        count = count + 1 
+    end
+    return count
+end
 
 function OpenGangActionsMenu()
     ESX.UI.Menu.CloseAll()
